@@ -20,10 +20,6 @@ namespace SharedLibrary.DTOs
         {
             return new Response<T> { Errors = dto, StatusCode = statusCode, IsSuccessfull = false};
         }
-        public static Response<T> Fail(ErrorDto dto, int statusCode, bool isShow = true)
-        {
-            return new Response<T> { Errors = dto, StatusCode = statusCode, IsSuccessfull = false };
-        }
         public static Response<T> Fail(string errorMessage, int statusCode, bool isShow = true)
         {
             var errorDto = new ErrorDto(errorMessage, isShow);
