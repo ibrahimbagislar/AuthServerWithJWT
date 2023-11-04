@@ -1,5 +1,4 @@
-# Project Name
-AuthServerwithJWT
+# AuthServerwithJWT
 
 ## About the Project
 This project aims to obtain tokens from an API using JSON Web Token (JWT) and addresses the configuration of these tokens. The project's purpose is to provide a general example of JWT usage.
