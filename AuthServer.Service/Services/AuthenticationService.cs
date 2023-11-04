@@ -8,11 +8,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using SharedLibrary.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Service.Services
 {
@@ -52,7 +47,7 @@ namespace AuthServer.Service.Services
             var token = _tokenService.CreateToken(user);
 
             //ilgili kullanıcının bir refresh tokeni yok ise kullanıcıya yeni bir refresh token veriyoruz eğer var ise refresh tokenini yeniliyoruz
-            var userRefreshToken = await _refreshTokenRepository.GetByFilter(x => x.UserId == user.Id).SingleOrDefaultAsync(x => x.RefreshToken == token.RefreshToken);
+            var userRefreshToken = await _refreshTokenRepository.GetByFilter(x => x.UserId == user.Id).SingleOrDefaultAsync();
             if (userRefreshToken == null)
                 await _refreshTokenRepository.AddAsync(new UserRefreshToken { UserId = user.Id, Expiration = token.RefreshTokenExpiration, RefreshToken = token.RefreshToken });
             else
@@ -60,7 +55,6 @@ namespace AuthServer.Service.Services
                 userRefreshToken.RefreshToken = token.RefreshToken;
                 userRefreshToken.Expiration = token.RefreshTokenExpiration;
             }
-
             await _uow.SaveChangesAsync();
             return Response<TokenDto>.Success(token, 200);
         }
@@ -87,8 +81,8 @@ namespace AuthServer.Service.Services
             if (userRefreshToken == null)
                 return Response<TokenDto>.Fail("RefreshToken Not Found", 404);
 
-            if (userRefreshToken.Expiration > DateTime.UtcNow)
-                return Response<TokenDto>.Fail("Refresh token expiration has not occurred.", 400);
+            if (userRefreshToken.Expiration < DateTime.UtcNow)
+                return Response<TokenDto>.Fail("Refresh token expiration has occurred.", 400);
 
 
             var user = await _userManager.FindByIdAsync(userRefreshToken.UserId);
@@ -114,7 +108,7 @@ namespace AuthServer.Service.Services
             _refreshTokenRepository.Remove(userRefreshToken);
             await _uow.SaveChangesAsync();
 
-            return Response<NoDataDto>.Success(200);
+            return Response<NoDataDto>.Success(204);
         }
     }
 }

@@ -50,7 +50,7 @@ namespace AuthServer.Service.Services
             return Response<TDto>.Success(data, 200);
         }
 
-        public async Task<Response<NoDataDto>> Remove(object id)
+        public async Task<Response<NoDataDto>> RemoveAsync(object id)
         {
             var removedEntity = await _repository.GetByIdAsync(id);
             if (removedEntity == null)
@@ -61,7 +61,7 @@ namespace AuthServer.Service.Services
             return Response<NoDataDto>.Success(204);
         }
 
-        public async Task<Response<NoDataDto>> Update(TDto entity,object id)
+        public async Task<Response<NoDataDto>> UpdateAsync(TDto entity,object id)
         {
             var isExistEntity = await _repository.GetByIdAsync(id);
             if (isExistEntity == null)

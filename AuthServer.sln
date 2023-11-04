@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.API", "AuthServer.API\AuthServer.API.csproj", "{363E3A09-9109-44FD-BF2E-ECD5AA7FA24F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer.API", "AuthServer.API\AuthServer.API.csproj", "{363E3A09-9109-44FD-BF2E-ECD5AA7FA24F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.Core", "AuthServer.Core\AuthServer.Core.csproj", "{FAE60979-B29D-432C-93B4-C2B1EAFDFDD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer.Core", "AuthServer.Core\AuthServer.Core.csproj", "{FAE60979-B29D-432C-93B4-C2B1EAFDFDD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.DataAccess", "AuthServer.DataAccess\AuthServer.DataAccess.csproj", "{AF9D03B1-A67F-44DE-957D-828254BC88AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer.DataAccess", "AuthServer.DataAccess\AuthServer.DataAccess.csproj", "{AF9D03B1-A67F-44DE-957D-828254BC88AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer.Service", "AuthServer.Service\AuthServer.Service.csproj", "{C28D172A-145C-4E0B-8DE8-C3BB1FAD12CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer.Service", "AuthServer.Service\AuthServer.Service.csproj", "{C28D172A-145C-4E0B-8DE8-C3BB1FAD12CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp2.API", "MiniApp2.API\MiniApp2.API.csproj", "{4113A86B-4E5F-4B23-9430-A1B694602A0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniApp2.API", "MiniApp2.API\MiniApp2.API.csproj", "{4113A86B-4E5F-4B23-9430-A1B694602A0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp.API", "MiniApp.API\MiniApp.API.csproj", "{252390AD-47FB-415F-85B3-B668D1883986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniApp.API", "MiniApp.API\MiniApp.API.csproj", "{252390AD-47FB-415F-85B3-B668D1883986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp3.API", "MiniApp3.API\MiniApp3.API.csproj", "{A9459F89-8CAF-4666-9D24-CB6733B4057C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{DBA518BE-824E-4582-8DF4-0D0829725D49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{DBA518BE-824E-4582-8DF4-0D0829725D49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniApp3.API", "MiniApp3.API\MiniApp3.API.csproj", "{0ADA47E2-F5DA-4E55-9E2E-0F3B29F8884F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +49,14 @@ Global
 		{252390AD-47FB-415F-85B3-B668D1883986}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252390AD-47FB-415F-85B3-B668D1883986}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252390AD-47FB-415F-85B3-B668D1883986}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9459F89-8CAF-4666-9D24-CB6733B4057C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9459F89-8CAF-4666-9D24-CB6733B4057C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9459F89-8CAF-4666-9D24-CB6733B4057C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9459F89-8CAF-4666-9D24-CB6733B4057C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBA518BE-824E-4582-8DF4-0D0829725D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBA518BE-824E-4582-8DF4-0D0829725D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBA518BE-824E-4582-8DF4-0D0829725D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBA518BE-824E-4582-8DF4-0D0829725D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ADA47E2-F5DA-4E55-9E2E-0F3B29F8884F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADA47E2-F5DA-4E55-9E2E-0F3B29F8884F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ADA47E2-F5DA-4E55-9E2E-0F3B29F8884F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ADA47E2-F5DA-4E55-9E2E-0F3B29F8884F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

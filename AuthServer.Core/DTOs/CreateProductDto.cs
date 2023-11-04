@@ -1,8 +1,7 @@
 ﻿namespace AuthServer.Core.DTOs
 {
-    public class ProductDto
+    public class CreateProductDto
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; } = null!;
         public decimal Price { get; set; }
         public int Stock { get; set; }

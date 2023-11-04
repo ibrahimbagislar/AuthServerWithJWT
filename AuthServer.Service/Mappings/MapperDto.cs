@@ -10,6 +10,7 @@ namespace AuthServer.Service.Mappings
         {
             this.CreateMap<AppUserDto, AppUser>().ReverseMap();
             this.CreateMap<ProductDto, Product>().ReverseMap();
+            this.CreateMap<ProductDto,CreateProductDto>().ReverseMap();
         }
     }
 }

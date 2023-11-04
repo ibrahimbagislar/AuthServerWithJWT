@@ -4,11 +4,6 @@ using AuthServer.Core.Services;
 using AuthServer.Service.Mappings;
 using Microsoft.AspNetCore.Identity;
 using SharedLibrary.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthServer.Service.Services
 {
@@ -34,7 +29,7 @@ namespace AuthServer.Service.Services
             return Response<AppUserDto>.Success(ObjectMapper.Mapper.Map<AppUserDto>(user),200);
         }
 
-        public async Task<Response<AppUserDto>> GetUserByNameAsync(string userName)
+        public async Task<Response<AppUserDto>> GetUserByUserNameAsync(string userName)
         {
             var user = await _userManager.FindByNameAsync(userName);
             if (user == null)

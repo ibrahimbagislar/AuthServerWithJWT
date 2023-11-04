@@ -11,7 +11,7 @@ namespace AuthServer.Core.Services
         Task<Response<IEnumerable<TDto>>> GetAllAsync();
         Task<Response<IEnumerable<TDto>>> GetByFilterAsync(Expression<Func<TEntity, bool>> filter);
         Task<Response<TDto>> AddAsync(TDto dto);
-        Task<Response<NoDataDto>> Update(TDto dto, object id);
-        Task<Response<NoDataDto>> Remove(object id);
+        Task<Response<NoDataDto>> UpdateAsync(TDto dto, object id);
+        Task<Response<NoDataDto>> RemoveAsync(object id);
     }
 }
